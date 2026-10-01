@@ -9,7 +9,7 @@ interface MovieGridProps {
 
 export function MovieGrid({ movies, bookmarkedMovieIds, onBookmarkToggle }: MovieGridProps) {
   return (
-    <section className="movie-grid" id="movies" aria-label="영화 목록">
+    <section className="grid grid-cols-5 gap-x-4 gap-y-[25px] max-[900px]:grid-cols-3 max-sm:grid-cols-2 max-[420px]:grid-cols-1" aria-label="영화 목록">
       {movies.map((movie) => (
         <MovieCard
           key={movie.id}
