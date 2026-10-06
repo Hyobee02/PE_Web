@@ -1,6 +1,7 @@
 package com.umc11th.controller;
 
 
+import com.umc11th.dto.BookResponse;
 import com.umc11th.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,8 +24,8 @@ public class BookController {
 
     // 3. HTTP GET 방식으로 /books 요청이 들어왔을 때 이 메서드가 실행됩니다.
     @GetMapping
-    public List<Map<String, Object>> getBooks() {
-        return bookService.getAllBooks();
+    public List<BookResponse> getBooks() {
+        return bookService.getBooks();
     }
 
     @GetMapping("/category/{categoryId}")
