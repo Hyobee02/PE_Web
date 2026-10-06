@@ -18,13 +18,4 @@ public class BookJdbcRepository {
         return jdbcTemplate.queryForList(sql, categoryId);
     }
 
-    public void save(Map<String, Object> body) {
-        String sql = "INSERT INTO book (category_id, title, description, is_available) VALUES (?, ?, ?, true)";
-        jdbcTemplate.update(
-                sql,
-                body.get("categoryId"),
-                body.get("title"),
-                body.get("description")
-        );
-    }
 }

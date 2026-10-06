@@ -35,4 +35,11 @@ public class Book {
 
     @Column(name = "is_available", nullable = false)
     private Boolean isAvailable;
+
+    public Book(Category category, String title, String description) {
+        this.category = category;
+        this.title = title;
+        this.description = description;
+        this.isAvailable = true;
+    }
 }
